@@ -170,7 +170,7 @@ describe('character data', () => {
     expect(character).toEqual({
       id: 'olga-kramarenko',
       name: 'Olga Kramarenko',
-      biography: { occupation: 'MSS Agent', signatureItem: 'Bravery Medal', description },
+      biography: { occupation: 'MSS Agent', signatureItem: 'Bravery Medal', description, agenda: character.biography?.agenda },
       attributes: { Strength: 5, Agility: 3, Wits: 3, Empathy: 3 },
       skills: { 'Close Combat': 3, 'Ranged Combat': 3, Command: 4 },
       weapons: [
@@ -190,7 +190,7 @@ describe('character data', () => {
     expect(markup).toContain('<h2>Signature Item</h2><p>Bravery Medal</p>');
     expect(markup.indexOf('<h2>Signature Item</h2>')).toBeLessThan(markup.indexOf('<h2>Description</h2>'));
     expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
-    expect(markup).not.toContain('Personal Agenda');
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
   });
 
   it('stores and renders Cixin Liu supplied details', () => {
@@ -199,7 +199,7 @@ describe('character data', () => {
     expect(character).toEqual({
       id: 'cixin-liu',
       name: 'Cixin Liu',
-      biography: { occupation: 'Station Engineer', signatureItem: 'Sci-fi story novel', description },
+      biography: { occupation: 'Station Engineer', signatureItem: 'Sci-fi story novel', description, agenda: character.biography?.agenda },
       attributes: { Strength: 3, Agility: 2, Wits: 5, Empathy: 4 },
       skills: { 'Heavy Machinery': 5, Observation: 3, Comtech: 5, Command: 1 },
       weapons: [],
@@ -215,7 +215,7 @@ describe('character data', () => {
     expect(markup).toContain('<h2>Career / Occupation</h2><p>Station Engineer</p>');
     expect(markup).toContain('<h2>Signature Item</h2><p>Sci-fi story novel</p>');
     expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
-    expect(markup).not.toContain('Personal Agenda');
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
   });
 
   it('stores and renders Ivan Dubov supplied details', () => {
@@ -224,7 +224,7 @@ describe('character data', () => {
     expect(character).toEqual({
       id: 'ivan-dubov',
       name: 'Ivan Dubov',
-      biography: { occupation: 'Machine Operator', signatureItem: 'Cigarette Case', description },
+      biography: { occupation: 'Machine Operator', signatureItem: 'Cigarette Case', description, agenda: character.biography?.agenda },
       attributes: { Strength: 5, Agility: 5, Wits: 2, Empathy: 2 },
       skills: { 'Heavy Machinery': 4, 'Close Combat': 3, Manipulation: 1, 'Ranged Combat': 2 },
       weapons: [{ name: 'Switch blade', maximum: null }],
@@ -240,7 +240,7 @@ describe('character data', () => {
     expect(markup).toContain('<h2>Career / Occupation</h2><p>Machine Operator</p>');
     expect(markup).toContain('<h2>Signature Item</h2><p>Cigarette Case</p>');
     expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
-    expect(markup).not.toContain('Personal Agenda');
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
   });
 
   it('stores and renders Kim Pham supplied details', () => {
@@ -249,7 +249,7 @@ describe('character data', () => {
     expect(character).toEqual({
       id: 'kim-pham',
       name: 'Kim Pham',
-      biography: { occupation: 'Diving Specialist / Doctor', signatureItem: 'Old family photo', description },
+      biography: { occupation: 'Diving Specialist / Doctor', signatureItem: 'Old family photo', description, agenda: character.biography?.agenda },
       attributes: { Strength: 3, Agility: 2, Wits: 4, Empathy: 5 },
       skills: { Observation: 3, Comtech: 3, 'Medical Aid': 4 },
       weapons: [],
@@ -268,7 +268,7 @@ describe('character data', () => {
     expect(markup).toContain('<h2>Career / Occupation</h2><p>Diving Specialist / Doctor</p>');
     expect(markup).toContain('<h2>Signature Item</h2><p>Old family photo</p>');
     expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
-    expect(markup).not.toContain('Personal Agenda');
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
   });
 
   it('stores and renders Diego Alvarez supplied details', () => {
@@ -277,7 +277,7 @@ describe('character data', () => {
     expect(character).toEqual({
       id: 'diego-alvarez',
       name: 'Diego Alvarez',
-      biography: { occupation: 'UPP State Company Agent', signatureItem: 'UPP shoulder patch', description },
+      biography: { occupation: 'UPP State Company Agent', signatureItem: 'UPP shoulder patch', description, agenda: character.biography?.agenda },
       attributes: { Strength: 3, Agility: 3, Wits: 5, Empathy: 3 },
       skills: { 'Close Combat': 2, Observation: 2, Survival: 1, Comtech: 4, 'Ranged Combat': 1 },
       weapons: [{ name: 'Custom underwater power tool', maximum: null }],
@@ -293,7 +293,7 @@ describe('character data', () => {
     expect(markup).toContain('<h2>Career / Occupation</h2><p>UPP State Company Agent</p>');
     expect(markup).toContain('<h2>Signature Item</h2><p>UPP shoulder patch</p>');
     expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
-    expect(markup).not.toContain('Personal Agenda');
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
   });
 
   it('stores and renders Maria Del Campos supplied details', () => {
@@ -302,7 +302,7 @@ describe('character data', () => {
     expect(character).toEqual({
       id: 'maria-del-campos',
       name: 'Maria Del Campos',
-      biography: { occupation: 'Hydroponics', signatureItem: 'Deep sea diver pin', description },
+      biography: { occupation: 'Hydroponics', signatureItem: 'Deep sea diver pin', description, agenda: character.biography?.agenda },
       attributes: { Strength: 4, Agility: 4, Wits: 3, Empathy: 3 },
       skills: { 'Heavy Machinery': 3, Stamina: 1, Comtech: 3, Mobility: 2, 'Ranged Combat': 1 },
       weapons: [],
@@ -318,12 +318,56 @@ describe('character data', () => {
     expect(markup).toContain('<h2>Career / Occupation</h2><p>Hydroponics</p>');
     expect(markup).toContain('<h2>Signature Item</h2><p>Deep sea diver pin</p>');
     expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
-    expect(markup).not.toContain('Personal Agenda');
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
   });
 
-  it('has fifteen independently selectable characters', () => {
-    expect(characters).toHaveLength(15);
-    expect(new Set(characters.map((character) => character.id)).size).toBe(15);
+  it('stores and renders Li Qiang supplied details', () => {
+    const character = characters.find((entry) => entry.id === 'li-qiang')!;
+    const description = 'Qiang is the supervisor in charge of the current shift at Novotny station. He is ruthless and ambitious, and he is not above taking a bribe to look the other way when station resources are diverted for corrupt gain.\nHe was surprised when his superiors told him that he was to stay at the station while an investigator was sent to find the missing comrade. He will do whatever they say for now because of his love for the station, but he is only truly loyal to himself, everyone else be damned.';
+    expect(character).toEqual({
+      id: 'li-qiang',
+      name: 'Li Qiang',
+      biography: { occupation: 'Supervisor', signatureItem: 'Demerits book', description, agenda: character.biography?.agenda },
+      attributes: { Strength: 4, Agility: 3, Wits: 3, Empathy: 4 },
+      skills: { 'Heavy Machinery': 3, Comtech: 2, Manipulation: 3, Command: 2 },
+      weapons: [{ name: '9mm Service Pistol (1 reload)', maximum: 2 }],
+      gear: [],
+      talent: {
+        name: 'Influence',
+        description: 'You can push any skill roll based on Empathy twice, gaining +1 Stress level for each push.',
+      },
+    });
+    expect(character.weapons[0].maximum).toBe(
+      characters.find((entry) => entry.id === 'olga-kramarenko')!.weapons[0].maximum,
+    );
+    expect(deriveRatings(character.attributes)).toEqual({ health: 4, resolve: 4 });
+    const markup = renderToStaticMarkup(<CharacterBiography character={character} />);
+    expect(markup).toContain('<h1>Li Qiang</h1>');
+    expect(markup).toContain('<h2>Career / Occupation</h2><p>Supervisor</p>');
+    expect(markup).toContain('<h2>Signature Item</h2><p>Demerits book</p>');
+    expect(markup).toContain(renderToStaticMarkup(<p>{description}</p>));
+    expect(markup).toContain('<h2>Personal Agenda</h2>');
+  });
+
+  it.each([
+    ['cixin-liu', 'You are convinced Dubov has something to do with the disappearance. Do not miss an opportunity to put this waste of space in his place.'],
+    ['diego-alvarez', 'You woke up with a hangover and missed your elevator ride to the surface. Now you are stuck because some poor fellow is lost. You will make the best of it, though, since you\'re a glass-half-full kind of guy. You don\'t like Kramarkeno, but you won\'t show it. In fact, help the investigator in any way you can to get to the bottom of this mystery.'],
+    ['kim-pham', 'You have a patient in your care, Anya, who must be looked after every now and then. You want to find your missing co-worker, but you don\'t trust Alvarez. His relentless optimism must be a cover for something...'],
+    ['ivan-dubov', 'It\'s not fair! If it weren\'t for that fool Liu, you\'d be on your way home now, not stuck here because someone got themselves lost. The UPP is way more like slavery than freedom, and you hate it. Make sure everyone knows what you think about this whole stinking mess.'],
+    ['olga-kramarenko', 'Investigate the disappearance. Something\'s not right here, and you suspect your superiors, although you\'re not sure why. You\'re a true hero of the UPP and should be given the respect you deserve.'],
+    ['maria-del-campos', 'You think everyone is mad. That lost engineer killed himself, and all the rest is a terrible hallucination. You have 10 doses of X-Stim on you. Administer a dose to everyone, whether they want it or not, and they\'ll calm down and see they\'re in a mass hallucination!'],
+    ['li-qiang', 'You love the base. Be a good caretaker and make sure this wonderful, historic station is treated with the reverence it deserves. But when it\'s time to go, look out for yourself and no one else!'],
+  ])('stores and renders the exact personal agenda for %s', (id, agenda) => {
+    const character = characters.find((entry) => entry.id === id)!;
+    expect(character.biography?.agenda).toBe(agenda);
+    const markup = renderToStaticMarkup(<CharacterBiography character={character} />);
+    expect(markup).toContain('<h2>Personal Agenda</h2>' + renderToStaticMarkup(<p>{agenda}</p>));
+    expect(markup.indexOf('<h2>Personal Agenda</h2>')).toBeGreaterThan(markup.indexOf('<h2>Description</h2>'));
+  });
+
+  it('has sixteen independently selectable characters', () => {
+    expect(characters).toHaveLength(16);
+    expect(new Set(characters.map((character) => character.id)).size).toBe(16);
   });
 });
 

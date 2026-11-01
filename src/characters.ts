@@ -168,6 +168,7 @@ export const characters: Character[] = [
     biography: {
       occupation: 'MSS Agent',
       signatureItem: 'Bravery Medal',
+      agenda: 'Investigate the disappearance. Something\'s not right here, and you suspect your superiors, although you\'re not sure why. You\'re a true hero of the UPP and should be given the respect you deserve.',
       description: 'Kramarenko was the captain of an elite unit of commandos trained in underwater demolition. About a year ago, her unshakable faith in the UPP was tested when she and her unit were abandoned in enemy infested waters (she was the lone survivor).\nDecorated for bravery, Olga felt emboldened enough to question her superiors on the actions that led to that military disaster.\nTheir response came swiftly, she was ordered to stand down until her next assignment and was transferred to the Ministry of Space Security (a promotion of sorts), Her next assignment came in the form of a missing persons investigation on a nearby water world called Voda.\nOlga has accepted the assignment with some wariness.',
     },
     attributes: { Strength: 5, Agility: 3, Wits: 3, Empathy: 3 },
@@ -188,6 +189,7 @@ export const characters: Character[] = [
     biography: {
       occupation: 'Station Engineer',
       signatureItem: 'Sci-fi story novel',
+      agenda: 'You are convinced Dubov has something to do with the disappearance. Do not miss an opportunity to put this waste of space in his place.',
       description: 'Liu has worked at Novotny station for over 25 years. He is steadfast in his belief that only through hard work and dedication can the people of the UPP further their cause across the galaxy. He has taken great pride in making sure the station\'s equipment is maintained in working order. This has been a challenge that is only getting worse as repeated pleas for even the most basic tools needed for the job have gone unheard. Nevertheless, he has dedicated his life to this station, and he will see it rise again to its former glory. This latest shift beneath the sea however has proven a challenge that can test anyone\'s resolve.',
     },
     attributes: { Strength: 3, Agility: 2, Wits: 5, Empathy: 4 },
@@ -205,6 +207,7 @@ export const characters: Character[] = [
     biography: {
       occupation: 'Machine Operator',
       signatureItem: 'Cigarette Case',
+      agenda: 'It\'s not fair! If it weren\'t for that fool Liu, you\'d be on your way home now, not stuck here because someone got themselves lost. The UPP is way more like slavery than freedom, and you hate it. Make sure everyone knows what you think about this whole stinking mess.',
       description: 'Ivan is an underwater welder who specializes in deep sea operations. He was sentenced to hard labor for repeated violations against the state authority for illegal gambling. After several years in a very tough labor prison, he was given the choice to continue to serve out his sentence or agree to a decades long contract at the underwater station. Having arrived recently he has given the station lifers like Liu an extremely hard time.\nHe is now waiting for the chance to abandon this life, which he feels is a life of servitude, and set out on his own. Dubov was not allowed to depart with the rest of the roughnecks due to disciplinary actions that resulted in him having to clean the latrines in the housing area.',
     },
     attributes: { Strength: 5, Agility: 5, Wits: 2, Empathy: 2 },
@@ -222,6 +225,7 @@ export const characters: Character[] = [
     biography: {
       occupation: 'Diving Specialist / Doctor',
       signatureItem: 'Old family photo',
+      agenda: 'You have a patient in your care, Anya, who must be looked after every now and then. You want to find your missing co-worker, but you don\'t trust Alvarez. His relentless optimism must be a cover for something...',
       description: 'Dr. Pham grew up in a land locked farm collective and dreamed of one day traveling the stars and discovering unknown worlds. She was the first in her family to gain an education and she chose medicine. After completing her studies, she he jumped at the chance to work at the bottom of an alien sea in a far-off planet and passed all her underwater skills test with flying colors. Shortly after her arrival at Novotny station (a few years back) she found out her family had died from a terrible accident at the farm. Disillusioned by something so easily preventable she now feels she might have made a terrible mistake trusting the UPP to look after its people.',
     },
     attributes: { Strength: 3, Agility: 2, Wits: 4, Empathy: 5 },
@@ -242,6 +246,7 @@ export const characters: Character[] = [
     biography: {
       occupation: 'UPP State Company Agent',
       signatureItem: 'UPP shoulder patch',
+      agenda: 'You woke up with a hangover and missed your elevator ride to the surface. Now you are stuck because some poor fellow is lost. You will make the best of it, though, since you\'re a glass-half-full kind of guy. You don\'t like Kramarkeno, but you won\'t show it. In fact, help the investigator in any way you can to get to the bottom of this mystery.',
       description: 'Diego was born on a water world and had a very rough upbringing where a lack of food and resources dominated everyday life. Due to his aptitude for science, he was able to join a UPP state-run cooperative as an underwater mining specialist and company representative. Diego is cunning but not a typical company agent as he prefers kindness and humanitarianism over ambition and ruthlessness. He has been assigned to Novotny station as part of an off-world exchange program. Last night he had a bit too much fun drinking and playing cards with Dubov and Frenkel and finds that he overslept his departure from the station.',
     },
     attributes: { Strength: 3, Agility: 3, Wits: 5, Empathy: 3 },
@@ -259,6 +264,7 @@ export const characters: Character[] = [
     biography: {
       occupation: 'Hydroponics',
       signatureItem: 'Deep sea diver pin',
+      agenda: 'You think everyone is mad. That lost engineer killed himself, and all the rest is a terrible hallucination. You have 10 doses of X-Stim on you. Administer a dose to everyone, whether they want it or not, and they\'ll calm down and see they\'re in a mass hallucination!',
       description: 'Maria grew up in family of deep-sea divers. When she took her UPP sponsored aptitude test it was only natural that she be assigned to the UPP\'s most high-profile deep-sea mining projects. Shortly after arriving at Novotny station she took on a secondary job working the hydroponics farm. She loves her job and feels she is a shining example of why the UPP is the perfect system and why all working people across the galaxy need to adopt this way of life.',
     },
     attributes: { Strength: 4, Agility: 4, Wits: 3, Empathy: 3 },
@@ -268,6 +274,24 @@ export const characters: Character[] = [
     talent: {
       name: 'Calm Breather',
       description: 'When making a supply roll for air, you get to roll 2 fewer dice than your air supply rating, to a minimum of 1 die.',
+    },
+  },
+  {
+    id: 'li-qiang',
+    name: 'Li Qiang',
+    biography: {
+      occupation: 'Supervisor',
+      signatureItem: 'Demerits book',
+      agenda: 'You love the base. Be a good caretaker and make sure this wonderful, historic station is treated with the reverence it deserves. But when it\'s time to go, look out for yourself and no one else!',
+      description: 'Qiang is the supervisor in charge of the current shift at Novotny station. He is ruthless and ambitious, and he is not above taking a bribe to look the other way when station resources are diverted for corrupt gain.\nHe was surprised when his superiors told him that he was to stay at the station while an investigator was sent to find the missing comrade. He will do whatever they say for now because of his love for the station, but he is only truly loyal to himself, everyone else be damned.',
+    },
+    attributes: { Strength: 4, Agility: 3, Wits: 3, Empathy: 4 },
+    skills: { 'Heavy Machinery': 3, Comtech: 2, Manipulation: 3, Command: 2 },
+    weapons: [{ name: '9mm Service Pistol (1 reload)', maximum: 2 }],
+    gear: [],
+    talent: {
+      name: 'Influence',
+      description: 'You can push any skill roll based on Empathy twice, gaining +1 Stress level for each push.',
     },
   },
 ];

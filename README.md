@@ -1,6 +1,6 @@
 # Alien RPG character sheets
 
-A React application for choosing and printing the fifteen supplied characters.
+A React application for choosing and printing the sixteen supplied characters.
 Sheets include talents, grouped attributes and skills, derived ratings, and
 pencil-entry tables for panic responses, weapons, ammo, gear, and supply.
 The panic responses table aligns with the Strength and Stress Level panels;
@@ -29,21 +29,26 @@ sections are omitted; characters without any biography details remain single-pag
 Hugo (Xeno-microbiologist), Tajima (Chemical Engineer), Myra (Hyperdyne Systems
 Model 113-8 Synthetic), and Dagny (Independent Free Trader) currently have supplied
 biographies, signature items, and personal agendas.
-Olga Kramarenko (MSS Agent) has a biography without a personal agenda, a 9mm Service
+Olga Kramarenko (MSS Agent) has a biography and personal agenda, a 9mm Service
 Pistol (2 reloads) with maximum Ammo 2, and a Combat Knife with blank Ammo.
 Her gear and Armor remain blank because none were supplied.
 Cixin Liu (Station Engineer) has a biography, Sci-fi story novel signature item,
-and Electronic Tools with blank Supply. No weapons, Armor, or agenda were supplied.
+and Electronic Tools with blank Supply. No weapons or Armor were supplied.
 Ivan Dubov (Machine Operator) has a biography, Cigarette Case signature item, and
-Switch blade with blank Ammo. No gear, Armor, or agenda were supplied.
+Switch blade with blank Ammo. No gear or Armor were supplied.
 Kim Pham (Diving Specialist / Doctor) has a biography, Old family photo signature
-item, Med Kit, and Naproleve (2 doses), both with blank Supply. No weapons, Armor,
-or agenda were supplied.
+item, Med Kit, and Naproleve (2 doses), both with blank Supply. No weapons or Armor
+were supplied.
 Diego Alvarez (UPP State Company Agent) has a biography, UPP shoulder patch
-signature item, and Custom underwater power tool with blank Ammo. No gear,
-Armor, or agenda were supplied.
+signature item, and Custom underwater power tool with blank Ammo. No gear or
+Armor were supplied.
 Maria Del Campos (Hydroponics) has a biography, Deep sea diver pin signature item,
-and X-Stim (10 doses) with blank Supply. No weapons, Armor, or agenda were supplied.
+and X-Stim (10 doses) with blank Supply. No weapons or Armor were supplied.
+Li Qiang (Supervisor) has a biography, Demerits book signature item, and 9mm Service
+Pistol (1 reload) with maximum Ammo 2 and blank current Ammo, like Olga's pistol.
+No gear or Armor were supplied.
+Liu, Alvarez, Pham, Dubov, Kramarenko, Del Campos, and Qiang all have personal
+agendas displayed after Description on their biography pages.
 Her signature item is Bravery Medal, shown before Description. Signature Item is
 omitted for characters without one.
 Add these details through the optional `biography` object (`occupation`,
