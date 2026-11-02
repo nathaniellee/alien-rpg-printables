@@ -6,6 +6,20 @@ pencil-entry tables for panic responses, weapons, ammo, gear, and supply.
 The panic responses table aligns with the Strength and Stress Level panels;
 Weapons and Gear split the remaining width equally, with 16px gaps.
 
+Use the navigation above the preview to switch between **Character sheets**,
+**Weapons reference**, and **Gear reference**. Each equipment view is a separate
+printable, sorted alphabetically by item name. Only the active view prints;
+switching views preserves the selected character.
+
+The reference catalog in [src/equipment.ts](src/equipment.ts) contains nine
+weapons and twelve gear items. Weapons show Modifier, Damage, Range, Ammo/Power,
+and Special; gear shows Range, Air/Power, and Effect. The compression suit's
+vacuum protection and other properties appear in Effect; gear has no Special
+column, giving effects more horizontal space. Missing weapon
+fields are omitted from the catalog and rendered as `--`, except Special, which
+stays blank. Missing gear fields stay blank. `Single use` values are preserved. These reference
+entries are independent of character loadouts and do not rename or change them.
+
 ## Run
 
 Use Node.js 20 or a newer supported LTS release, with npm 10.9.4 or newer.
